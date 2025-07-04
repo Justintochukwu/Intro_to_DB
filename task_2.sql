@@ -21,11 +21,11 @@ CREATE TABLE Customers (
     address TEXT
 ):
 
-CREATE TABLE IF NOT EXISTS ORDERS (
+CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
     order_date DATE,
-    FOREIGN KEY (customer_id) REFERENCES CUSTOMER(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 ):
 
 CREATE TABLE IF NOT EXISTS Order_details (
