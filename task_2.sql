@@ -1,9 +1,8 @@
 USE alx_book_store:
 
-CREATE TABLE IF NOT EXISTS Authors (
+CREATE TABLE Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
     author_name VARCHAR(100) NOT NULL,
-    BIO TEXT
 ):
 
 CREATE TABLE IF NOT EXISTS BOOKS (
