@@ -28,12 +28,12 @@ CREATE TABLE Orders (
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 ):
 
-CREATE TABLE IF NOT EXISTS Order_details (
+CREATE TABLE Order_details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     book_id INIT,
     quantity INT,
     subtotal DECIMAL(10,2)
-    FOREIGN KEY (order_id) REFERENCES ORDERS(order_id),
-    FOREIGN KEY (book_id) REFERENCES BOOKS(book_id)
+    FOREIGN KEY (order_id) REFERENCES Order(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 ):
